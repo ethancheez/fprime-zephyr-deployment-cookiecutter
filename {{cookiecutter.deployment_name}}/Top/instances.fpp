@@ -38,7 +38,9 @@ module {{cookiecutter.deployment_name}} {
 
   instance rateGroup1: Svc.PassiveRateGroup base id 0x1000
 
-  instance commDriver: Arduino.StreamDriver base id 0x4000
+  instance rateDriver: Zephyr.ZephyrRateDriver base id 0x1100
+
+  instance commDriver: Zephyr.ZephyrUartDriver base id 0x4000
 
   instance framer: Svc.Framer base id 0x4100
 
@@ -46,7 +48,7 @@ module {{cookiecutter.deployment_name}} {
 
   instance fatalHandler: Svc.FatalHandler base id 0x4300
 
-  instance timeHandler: Arduino.ArduinoTime base id 0x4400 \
+  instance timeHandler: Zephyr.ZephyrTime base id 0x4400
 
   instance rateGroupDriver: Svc.RateGroupDriver base id 0x4500
 
@@ -57,7 +59,5 @@ module {{cookiecutter.deployment_name}} {
   instance deframer: Svc.Deframer base id 0x4800
 
   instance systemResources: Svc.SystemResources base id 0x4900
-
-  instance rateDriver: Arduino.HardwareRateDriver base id 0x4A00
 
 }
