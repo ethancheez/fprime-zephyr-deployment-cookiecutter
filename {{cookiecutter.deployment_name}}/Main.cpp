@@ -6,8 +6,6 @@
 // Used to access topology functions
 #include <{{cookiecutter.deployment_name}}/Top/{{cookiecutter.deployment_name}}TopologyAc.hpp>
 #include <{{cookiecutter.deployment_name}}/Top/{{cookiecutter.deployment_name}}Topology.hpp>
-// Used for Task Runner
-#include <Os/Baremetal/TaskRunner/TaskRunner.hpp>
 
 // Used for logging
 #include <Os/Log.hpp>
